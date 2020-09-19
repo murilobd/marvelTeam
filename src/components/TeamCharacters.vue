@@ -1,6 +1,7 @@
 <template>
   <div>
     <sui-loader
+      id="loader"
       active
       centered
       inline

@@ -1,6 +1,7 @@
 <template>
   <div>
     <sui-loader
+      id="loader"
       active
       centered
       inline
@@ -16,6 +17,7 @@
       <sui-grid-row :columns="2">
         <sui-grid-column>
           <sui-input
+            id="searchInput"
             class="width100 marginHorizontal10"
             v-model="searchTxt"
             placeholder="Search the characters..."
@@ -23,6 +25,7 @@
         </sui-grid-column>
         <sui-grid-column>
           <sui-dropdown
+            id="filterDropdown"
             class="width100 marginHorizontal10"
             fluid
             :options="comics"
@@ -45,7 +48,7 @@
       </div>
     </div>
 
-    <sui-modal v-model="modalOpened">
+    <sui-modal v-model="modalOpened" id="successModal">
       <sui-modal-header>Congratulations!! Your team is complete.</sui-modal-header>
       <sui-modal-content>
         <div class="ui stackable three column grid">
